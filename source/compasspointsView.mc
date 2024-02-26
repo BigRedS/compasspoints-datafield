@@ -17,7 +17,7 @@ class compasspointsView extends WatchUi.SimpleDataField {
     // Note that compute() and onUpdate() are asynchronous, and there is no
     // guarantee that compute() will be called before onUpdate().
     function compute(info){
-        var degrees = info.bearing * (180/ Math.PI);
+        var degrees = info.track * (180/ Math.PI);
         var point = "n/a";
 
         if( degrees <= 45 ){
